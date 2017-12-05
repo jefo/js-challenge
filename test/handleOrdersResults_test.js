@@ -20,6 +20,23 @@ describe('handleOrdersResults', () => {
             sendEmail
         });
     });
+    it('should throw error if no logEvent or sendEmail args provided', () => {
+        assert.throws(
+            () => createOrdersResultsHandler({
+                logEvent: null,
+                sendEmail
+            }), Error);
+        assert.throws(
+            () => createOrdersResultsHandler({
+                logEvent,
+                sendEmail: null
+            }), Error);
+        assert.throws(
+            () => createOrdersResultsHandler({
+                logEvent: null,
+                sendEmail: null
+            }), Error);
+    });
     it('should handle failed orders', () => {
         handleOrders(0, 1);
         assert.equal(emails.length, 2);

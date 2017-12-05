@@ -1,0 +1,18 @@
+{
+  "name": "js-challenge",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/jefo/js-challenge.git",
+  "author": "jefo <johnyjefo@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "neutrino start --use neutrino-preset-node",
+    "build": "neutrino build --use neutrino-preset-node",
+    "test": "neutrino test --use neutrino-preset-node neutrino-preset-mocha"
+  },
+  "devDependencies": {
+    "neutrino": "^7.4.0",
+    "neutrino-preset-mocha": "^7.4.0",
+    "neutrino-preset-node": "^7.4.0"
+  }
+}
